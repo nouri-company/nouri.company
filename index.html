@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nouri Company</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #0f0f0f;
       color: #fff;
       display: flex;
@@ -17,12 +18,15 @@
       min-height: 100vh;
       padding: 2rem;
       text-align: center;
+      overflow-x: hidden;
     }
 
     h1 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
       margin-bottom: 0.5rem;
       color: #ff8700;
+      animation: fadeIn 1s ease-in-out;
     }
 
     h2 {
@@ -30,17 +34,45 @@
       font-size: 1.5rem;
       color: #ccc;
       margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     .tagline {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: #999;
       max-width: 600px;
+      margin-bottom: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .products {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      animation: fadeInUp 2.5s ease-in-out;
+    }
+
+    .product-link {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border: 2px solid #ff8700;
+      border-radius: 12px;
+      color: #ff8700;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .product-link:hover {
+      background-color: #ff8700;
+      color: #0f0f0f;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #ff8700;
     }
 
     footer {
-      position: absolute;
-      bottom: 1rem;
+      margin-top: 3rem;
       font-size: 0.875rem;
       color: #555;
     }
@@ -49,6 +81,17 @@
       h1 { font-size: 2.2rem; }
       h2 { font-size: 1.2rem; }
       .tagline { font-size: 1rem; }
+      .product-link { width: 80%; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -58,6 +101,12 @@
   <p class="tagline">
     With <strong>nouri.company</strong>, nourish your potential with simple innovation.
   </p>
+
+  <div class="products">
+    <a class="product-link" href="https://voice-tale.nouri.company" target="_blank">🎙 Voice Tale</a>
+    <a class="product-link" href="https://typa.nouri.company" target="_blank">⌨️ Typa</a>
+  </div>
+
   <footer>&copy; 2025 Nouri Company. All rights reserved.</footer>
 </body>
 </html>
